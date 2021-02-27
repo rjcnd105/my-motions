@@ -1,1 +1,1 @@
-import 'turbolinks';
+import 'turbolinks'

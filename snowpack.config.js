@@ -44,4 +44,4 @@ module.exports = {
     minify: true,
     target: 'es2020',
   },
-};
+}

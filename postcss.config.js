@@ -1,10 +1,9 @@
-const postcssPresetEnv = require('postcss-preset-env');
+const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   plugins: [
     postcssPresetEnv({
-      /* use stage 3 features + css nesting rules */
-      // stage: 3,
+      stage: 2,
       features: {
         'nesting-rules': true,
       },
@@ -12,4 +11,4 @@ module.exports = {
     require('tailwindcss'),
     require('autoprefixer'),
   ],
-};
+}

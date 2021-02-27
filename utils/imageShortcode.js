@@ -1,10 +1,10 @@
-const Image = require('@11ty/eleventy-img');
+const Image = require('@11ty/eleventy-img')
 
 async function imageShortcode(src, alt, classList, sizes) {
   const isOnNetlify =
     process.env.CONTEXT === 'production' ||
     process.env.CONTEXT === 'deploy-preview' ||
-    process.env.CONTEXT === 'branch-deploy';
+    process.env.CONTEXT === 'branch-deploy'
 
   const metadata = await Image(src, {
     widths: [
@@ -27,7 +27,7 @@ async function imageShortcode(src, alt, classList, sizes) {
     svgShortCircuit: true,
     outputDir: '_site/images/',
     urlPath: '/images/',
-  });
+  })
 
   const imageAttributes = {
     alt,
@@ -35,10 +35,10 @@ async function imageShortcode(src, alt, classList, sizes) {
     class: classList,
     loading: 'lazy',
     decoding: 'auto',
-  };
+  }
 
   return Image.generateHTML(metadata, imageAttributes, {
     whitespaceMode: 'inline',
-  });
+  })
 }
-exports.imageShortcode = imageShortcode;
+exports.imageShortcode = imageShortcode
