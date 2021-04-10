@@ -1,5 +1,5 @@
 import 'alpinejs'
-import './motion'
+import { ui } from './motion'
 
 const env = document.querySelector('body').dataset.env
 
@@ -14,3 +14,5 @@ if ('serviceWorker' in navigator && env === 'production') {
     }
   })
 }
+
+window.ui = ui
